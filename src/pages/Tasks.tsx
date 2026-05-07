@@ -4,14 +4,14 @@ import { useAuthStore } from '../store/authStore'
 import { projectService } from '../services/projectService'
 import { taskService } from '../services/taskService'
 import { Task, TaskStatus, TaskPriority, Project } from '../types'
-import { Search, Filter } from 'lucide-react'
+import { Search } from 'lucide-react'
 import { getStatusColor, getPriorityColor, formatDate } from '../utils/helpers'
 import toast from 'react-hot-toast'
 
 const Tasks = () => {
     const { user } = useAuthStore()
     const [tasks, setTasks] = useState<Task[]>([])
-    const [projects, setProjects] = useState<Project[]>([])
+    const [, setProjects] = useState<Project[]>([])
     const [isLoading, setIsLoading] = useState(true)
     const [search, setSearch] = useState('')
     const [statusFilter, setStatusFilter] = useState<TaskStatus | 'ALL'>('ALL')

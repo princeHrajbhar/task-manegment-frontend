@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { projectService } from '../services/projectService'
-import { Project, ProjectStatus } from '../types'
+import { Project } from '../types'
 import { Plus, Search } from 'lucide-react'
 import { getProjectStatusColor, formatRelativeTime } from '../utils/helpers'
 import toast from 'react-hot-toast'
